@@ -1,0 +1,32 @@
+
+CREATE DATABASE IF NOT EXISTS pense_logico;
+USE pense_logico;
+
+CREATE TABLE IF NOT EXISTS users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(120),
+  email VARCHAR(180) UNIQUE,
+  password VARCHAR(255)
+);
+
+CREATE TABLE IF NOT EXISTS courses (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  title VARCHAR(200),
+  description TEXT,
+  image VARCHAR(255)
+);
+
+CREATE TABLE IF NOT EXISTS lessons (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  course_id INT,
+  title VARCHAR(255),
+  content TEXT,
+  FOREIGN KEY (course_id) REFERENCES courses(id)
+);
+
+CREATE TABLE IF NOT EXISTS enrolls (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  user_id INT,
+  course_id INT,
+  enrolled_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

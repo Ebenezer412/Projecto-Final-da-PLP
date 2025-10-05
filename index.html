@@ -1,0 +1,110 @@
+
+<!doctype html>
+<html lang="pt-AO">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pense Lógico — Plataforma</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+  <button class="logo" id="btn-home-logo" style="border:none;background:none;cursor:pointer">PL</button>
+      <div>
+        <h1>Pense Lógico</h1>
+        <small>Formações profissionais — Acesso dinâmico e inclusivo</small>
+      </div>
+    </div>
+    <nav class="nav">
+      <button id="btn-courses" class="ghost">Cursos</button>
+      <button id="btn-dashboard" class="ghost">Painel</button>
+      <button id="btn-login" class="primary">Entrar</button>
+      <button id="btn-about" class="ghost">Sobre Nós</button>
+      <button id="btn-register" class="ghost">Cadastro</button>
+      <span id="user-info" style="margin-left:16px;display:none;font-weight:600"></span>
+      <button id="btn-logout" class="ghost" style="display:none;margin-left:8px">Sair</button>
+    </nav>
+  </header>
+
+  <main class="container">
+  <section class="hero">
+      <div class="hero-left">
+        <h2>Aprenda competências práticas.</h2>
+        <p>Formações fáceis de seguir, com certificado e foco no mercado de trabalho local.</p>
+        <div class="cta-row">
+          <button id="cta-join" class="primary large">Começar agora</button>
+          <button id="cta-demo" class="ghost">Demo (local)</button>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="carousel" id="carousel">
+          <div class="slides" id="slides"></div>
+          <div class="carousel-controls">
+            <button id="prev">◀</button>
+            <button id="next">▶</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="about-section page" id="about" style="display:none;">
+      <h3>Sobre Nós</h3>
+      <div class="card" style="max-width:600px;margin:auto;">
+        <h4>Missão</h4>
+        <p>Promover educação acessível e prática, conectando jovens ao mercado de trabalho e à tecnologia.</p>
+        <h4>Visão</h4>
+        <p>Ser referência em formação digital inclusiva, impulsionando carreiras e inovação em Angola.</p>
+        <h4>Valores</h4>
+        <ul>
+          <li>Inclusão</li>
+          <li>Praticidade</li>
+          <li>Inovação</li>
+          <li>Compromisso social</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="courses-section" id="courses-section">
+      <h3>Todos os Cursos</h3>
+      <div class="courses-grid" id="courses-grid"></div>
+    </section>
+    <section class="dashboard-section page" id="dashboard" style="display:none;">
+      <h3>Meu Painel</h3>
+      <div id="dashboard-content">
+        <p>Carregando...</p>
+      </div>
+    </section>
+    <section class="register-section page" id="register" style="display:none;">
+      <h3>Cadastro de Novo Aluno</h3>
+      <form id="register-form" class="card" style="max-width:400px;margin:auto;display:flex;flex-direction:column;gap:12px;">
+        <input type="text" id="reg-name" placeholder="Nome completo" required>
+        <input type="email" id="reg-email" placeholder="Email" required>
+        <input type="password" id="reg-password" placeholder="Senha" required>
+        <button type="submit" class="primary large">Cadastrar</button>
+        <div id="register-msg" style="color:var(--accent-3);font-size:14px;"></div>
+      </form>
+    </section>
+
+    <section id="course-view" class="page" style="display:none;">
+      <button id="back">← Voltar</button>
+      <div class="course-detail card">
+        <img id="course-img" src="" alt="imagem do curso">
+        <h3 id="course-title"></h3>
+        <p id="course-desc"></p>
+        <div id="lessons-list"></div>
+        <button id="enroll-btn" class="primary">Inscrever-se</button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div>
+      <strong>Pense Lógico</strong> — Unindo educação e empregabilidade.
+    </div>
+    <div>Contato: ebenezervilola@gmail.com • +244 938 229 459</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
